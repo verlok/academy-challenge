@@ -138,6 +138,7 @@ footer {
 img,
 iframe {
   width: 100%;
+  height: auto;
 }
 
 /* components/card.css */
