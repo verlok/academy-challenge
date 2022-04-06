@@ -8,7 +8,7 @@
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
     />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/index.min.css" />
   </head>
   <body>
     <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
@@ -146,14 +146,32 @@
     <main>
       <section class="hero">
         <picture>
-          <source type="image/avif" srcset="./images/banner.avif" />
-          <source type="image/webp" srcset="./images/banner.webp" />
+          <source
+            type="image/avif"
+            srcset="
+              ./images/banner-750.avif   750w,
+              ./images/banner-1100.avif 1100w,
+              ./images/banner-1320.avif 1320w,
+              ./images/banner-1920.avif 1920w
+            "
+          />
+          <source
+            type="image/webp"
+            srcset="
+              ./images/banner-750.webp   750w,
+              ./images/banner-1100.webp 1100w,
+              ./images/banner-1320.webp 1320w,
+              ./images/banner-1920.webp 1920w
+            "
+          />
           <img
             width="1920"
             height="722"
             src="./images/banner.png"
+            loading="eager"
             alt="Hero image"
             class="hero__img"
+            sizes="85vw"
           />
         </picture>
       </section>
@@ -161,9 +179,56 @@
         <article class="gridbox__item">
           <section class="card">
             <picture>
-              <source type="image/avif" srcset="./images/image-tree.avif" />
-              <source type="image/webp" srcset="./images/image-tree.webp" />
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
               <img
+                loading="eager"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+                sizes="(min-width: 1920px) 45vw, 75vw"
+              />
+            </picture>
+            <hr />
+          </section>
+        </article>
+        <article class="gridbox__item">
+          <section class="card">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="eager"
                 src="./images/image-tree.jpg"
                 width="1920"
                 height="1280"
@@ -177,9 +242,24 @@
         <article class="gridbox__item">
           <section class="card">
             <picture>
-              <source type="image/avif" srcset="./images/image-tree.avif" />
-              <source type="image/webp" srcset="./images/image-tree.webp" />
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
               <img
+                loading="lazy"
                 src="./images/image-tree.jpg"
                 width="1920"
                 height="1280"
@@ -187,18 +267,6 @@
                 class="card__img"
               />
             </picture>
-            <hr />
-          </section>
-        </article>
-        <article class="gridbox__item">
-          <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
             <hr />
           </section>
         </article>
@@ -216,127 +284,316 @@
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
         <article class="gridbox__item">
           <section class="card">
-            <img
-              data-src="./images/image-tree.jpg"
-              width="1920"
-              height="1280"
-              alt=""
-              class="lazy card__img"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./images/image-tree-650.avif   650w,
+                  ./images/image-tree-900.avif   900w,
+                  ./images/image-tree-1100.avif 1100w
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/image-tree-650.webp   650w,
+                  ./images/image-tree-900.webp   900w,
+                  ./images/image-tree-1100.webp 1100w
+                "
+              />
+              <img
+                loading="lazy"
+                src="./images/image-tree.jpg"
+                width="1920"
+                height="1280"
+                alt=""
+                class="card__img"
+              />
+            </picture>
             <hr />
           </section>
         </article>
       </section>
     </main>
-    <script src="script/gridbox.js"></script>
-    <script src="script/lazy-images.js"></script>
+    <script async src="script/gridbox.min.js"></script>
   </body>
 </html>
