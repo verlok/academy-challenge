@@ -23,42 +23,6 @@
           width="80"
           height="60"
         >
-          <metadata>
-            <rdf:RDF
-              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlns:connect="http://www.w3.org/1999/08/29-svg-connections-in-RDF#"
-            >
-              <rdf:Description about="#TypeA">
-                <connect:ends rdf:resource="#line1" />
-                <connect:ends rdf:resource="#line2" />
-                <connect:ends rdf:resource="#line3" />
-                <connect:ends rdf:resource="#box1" />
-                <connect:ends rdf:resource="#box2" />
-              </rdf:Description>
-              <rdf:Description about="#TypeB">
-                <connect:ends rdf:resource="#line1" />
-                <connect:ends rdf:resource="#line2" />
-                <connect:ends rdf:resource="#line3" />
-                <connect:ends rdf:resource="#box1" />
-              </rdf:Description>
-              <rdf:Description about="#stroke">
-                <connect:ends rdf:resource="#stroke1" />
-                <connect:ends rdf:resource="#stroke2" />
-                <connect:ends rdf:resource="#stroke3" />
-                <connect:ends rdf:resource="#gradient-for-first-element" />
-                <connect:ends rdf:resource="#gradient-for-second-element" />
-                <connect:ends rdf:resource="#gradient-for-third-element" />
-              </rdf:Description>
-              <rdf:Description about="#animation">
-                <connect:ends rdf:resource="#first-element" />
-                <connect:ends rdf:resource="#TypeA" />
-                <connect:ends rdf:resource="#TypeB" />
-                <connect:ends rdf:resource="#animate" />
-                <connect:ends rdf:resource="#animate2" />
-                <connect:ends rdf:resource="#animate-end" />
-              </rdf:Description>
-            </rdf:RDF>
-          </metadata>
           <defs>
             <circle id="circle1" cx="0" cy="0" r="5" />
 
@@ -276,7 +240,6 @@
         </article>
       </section>
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/gridbox.js"></script>
     <script src="script/app.js"></script>
   </body>
