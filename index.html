@@ -11,47 +11,20 @@
       rel="stylesheet"
       href="http://slowfil.es/file?type=css&delay=1000&sync-in-head"
     />
-    <script src="https://slowfil.es/file?type=js&delay=1500&sync-in-head&01"></script>
     <link rel="stylesheet" href="importer.css" />
     <link rel="stylesheet" href="styles/index.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-      var script = document.createElement("script");
-      script.src =
-        "https://slowfil.es/file?type=js&delay=1000&async-snippet-in-head";
-      document.head.appendChild(script);
-    </script>
+    
     <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
-    <script src="https://slowfil.es/file?type=js&delay=1000&sync-in-head&02"></script>
+    
     <style>
       @import url("https://slowfil.es/file?type=css&delay=1000&imported-from-html");
     </style>
     <link rel="preload" href="background.jpg" as="image" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
     />
-    <script>
-      // Slow JS
-      function wait(ms) {
-        var start = Date.now(),
-          now = start;
-        while (now - start < ms) {
-          now = Date.now();
-        }
-      }
-      // anti flicker
-      const antiflicker = () => {
-        document.body.style.visibility = "hidden";
-        window.addEventListener("load", () => {
-          document.body.removeAttribute("style");
-          console.log("rxe");
-        });
-      };
-      wait(1000);
-      antiflicker();
-    </script>
+    
     <title>Get Your &lt;head&gt; Straight</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
@@ -228,8 +201,6 @@
       <section class="hero">
         <img data-src="banner.png" alt="" class="hero__img" />
       </section>
-      <script src="script/hero.js"></script>
-
       <section class="gridbox">
         <article class="gridbox__item">
           <section class="card">
@@ -322,8 +293,10 @@
           </section>
         </article>
       </section>
-      <script src="script/gridbox.js"></script>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script/gridbox.js"></script>
     <script src="script/app.js"></script>
+    <script src="script/hero.js"></script>
   </body>
 </html>
