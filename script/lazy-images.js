@@ -1,4 +1,4 @@
-const images = document.querySelectorAll("img");
+const images = document.querySelectorAll("img.lazy");
 
 const lazyImageObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
