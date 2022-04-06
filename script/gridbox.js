@@ -6,11 +6,11 @@ const newText = document.createTextNode(
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non curabitur gravida arcu ac tortor dignissim. Augue lacus viverra vitae congue eu consequat ac."
 );
 newParagraph.appendChild(newText);
+const maxHeight = 400;
 
 // create dynamic content
 card.forEach((entry) => {
-  const maxHeight = 400;
-  let cardHeight = entry.offsetHeight;
+  let cardHeight;
   do {
     entry.appendChild(newParagraph.cloneNode(true));
     cardHeight = entry.offsetHeight;
